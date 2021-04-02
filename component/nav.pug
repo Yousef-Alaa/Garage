@@ -1,0 +1,28 @@
+nav.navbar.navbar-expand-xl
+    .container-xxl
+        a.navbar-brand(href="#")
+            img.img-fluid(src='images/logo.png' alt='Logo')
+            .
+                TheGarage
+        
+        
+        button.navbar-toggler.un-active(
+            type="button",
+            aria-expanded="false",
+            aria-controls="MyNav",
+            data-bs-target="#MyNav",
+            data-bs-toggle="collapse",
+            aria-label="Toggle navigation"
+            )
+
+            span.nav-icon
+        
+        #MyNav.collapse.navbar-collapse
+            ul.navbar-nav.ms-auto
+                li.nav-item.active(data-scroll="top"): span home
+                each val in ['about', 'clients', 'testimonials', 'products', 'blogs', 'gallary', 'pricing', 'contact']
+                
+                    li.nav-item(data-scroll="#" + val)
+                        span #{val}
+                li.nav-item
+                    button.main-btn buy car

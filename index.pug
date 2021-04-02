@@ -1,0 +1,275 @@
+- var tit = 'Garage'
+- var desc = 'This Website For Garage'
+
+doctype html
+html(lang="en")
+    include component/head
+    body
+        // Start Navbar
+        include component/nav
+
+        // Start Header
+        header
+            .overlay
+            .container
+                article
+                    h1 get your<br>dream <span>car</span> now
+                    p enjoy in <span>our</span> garage, sorry your garage
+                    a.play-vid.venobox(href='https://www.youtube.com/watch?v=Q8-AE6RjbcM' data-vbtype="video" data-autoplay="true")
+                        i(class='fas fa-play')
+                    button.about about the garage
+        
+        // Start Our Clients
+        section.our-clients.container
+            h2.main-h our clients
+            p Here are some of our clients
+            .row
+                .col-md-4.col-6
+                    article
+                        img.img-fluid(src='images/client-1.jpg' alt='Client 01')
+                        .box
+                            h3 devid fancosh
+                            p client in garage
+                            .icons
+                                i.fab.fa-facebook
+                                i.fab.fa-twitter
+                                i.fab.fa-google-plus
+                                i.fab.fa-instagram
+                                
+                .col-md-4.col-6
+                    article
+                        img.img-fluid(src='images/client-2.jpg' alt='Client 02')
+                        .box
+                            h3 devid fancosh
+                            p client in garage
+                            .icons
+                                i.fab.fa-facebook
+                                i.fab.fa-twitter
+                                i.fab.fa-google-plus
+                                i.fab.fa-instagram
+        
+                .col-md-4.col-6
+                    article
+                        img.img-fluid(src='images/client-3.jpg' alt='Client 03')
+                        .box
+                            h3 devid fancosh
+                            p client in garage
+                            .icons
+                                i.fab.fa-facebook
+                                i.fab.fa-twitter
+                                i.fab.fa-google-plus
+                                i.fab.fa-instagram
+                
+                .col-md-4.col-6
+                    article
+                        img.img-fluid(src='images/client-4.jpg' alt='Client 04')
+                        .box
+                            h3 devid fancosh
+                            p client in garage
+                            .icons
+                                i.fab.fa-facebook
+                                i.fab.fa-twitter
+                                i.fab.fa-google-plus
+                                i.fab.fa-instagram
+        
+                .col-md-4.col-6
+                    article
+                        img.img-fluid(src='images/client-5.jpg' alt='Client 05')
+                        .box
+                            h3 devid fancosh
+                            p client in garage
+                            .icons
+                                i.fab.fa-facebook
+                                i.fab.fa-twitter
+                                i.fab.fa-google-plus
+                                i.fab.fa-instagram
+                
+                .col-md-4.col-6
+                    article
+                        img.img-fluid(src='images/client-6.jpg' alt='Client 06')
+                        .box
+                            h3 devid fancosh
+                            p client in garage
+                            .icons
+                                i.fab.fa-facebook
+                                i.fab.fa-twitter
+                                i.fab.fa-google-plus
+                                i.fab.fa-instagram        
+        
+        // Start About Garage
+        section.about-garage
+            .overlay
+            .container
+                .row.justify-content-center
+                    .col-lg-6.col-sm-8
+                        h3.text-center.text-lg-start about the garage
+                        p.text-center.text-lg-start Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in est ut optio sequi unde.
+
+
+                    .col-lg-3.col-sm-6
+                        h3.text-center.text-lg-start where
+                        p.text-center.text-lg-start Egypt, kafr-elsheikh, eleslah
+
+                    .col-lg-3.col-sm-6
+                        h3.text-center.text-lg-start information
+                        p.text-center.text-lg-start Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nihil nostrum ducimus saepe.
+        
+        // Start Testimonials
+        .testimonials
+            .container
+                h2.main-h testimonials
+                p what our clients say
+
+                .buttons
+                    button.btn.active(data-show='#stuff-1') stuff 1
+                    button.btn(data-show='#stuff-2') stuff 2
+                    button.btn(data-show='#stuff-3') stuff 3
+
+                p.italic Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius necessitatibus voluptatem quis labore perspiciatis quia.
+        
+                .stuffs
+                    #stuff-1.stuff
+                        .item
+                            .time 09:30 AM
+                            .info
+                                img(src='images/client-1.jpg' alt='Client 1')
+                                h5 Registration
+                                p Fugit voluptas iusto maiores temporibus autem numquam magnam.
+
+                        .item
+                            .time 10:30 AM
+                            .info
+                                img(src='images/client-2.jpg' alt='Client 2')
+                                h5 Keynote
+                                    span Brenden Legros
+                                p Facere provident incidunt quos voluptas.
+
+                        .item
+                            .time 11:30 AM
+                            .info
+                                img(src='images/client-3.jpg' alt='Client 3')
+                                h5 Et voluptatem iusto dicta nobis.
+                                    span Hubert Hirthe
+                                p FMaiores dignissimos neque qui cum accusantium ut sit sint inventore.
+
+                        .item
+                            .time 12:30 AM
+                            .info
+                                img(src='images/client-4.jpg' alt='Client 4')
+                                h5 Quo qui praesentium nesciunt
+                                    span Willow Trantow
+                                p Voluptatem et alias dolorum est aut sit enim neque veritatis.
+
+                        .item
+                            .time 01:30 AM
+                            .info
+                                img(src='images/client-5.jpg' alt='Client 5')
+                                h5 Explicabo et rerum quis et ut ea.
+                                    span Brenden Legros
+                                p Cole Emmerich
+
+                        .item
+                            .time 02:30 AM
+                            .info
+                                img(src='images/client-6.jpg' alt='Client 6')
+                                h5 Qui non qui vel amet culpa sequi.
+                                    span Jack Christiansen
+                                p Nam ex distinctio voluptatem doloremque suscipit iusto.
+
+                    #stuff-2.stuff
+                        .item
+                            .time 10:30 AM
+                            .info
+                                img(src='images/client-2.jpg' alt='Client 2')
+                                h5 Keynote
+                                    span Brenden Legros
+                                p Facere provident incidunt quos voluptas.
+
+                        .item
+                            .time 11:30 AM
+                            .info
+                                img(src='images/client-3.jpg' alt='Client 3')
+                                h5 Et voluptatem iusto dicta nobis.
+                                    span Hubert Hirthe
+                                p FMaiores dignissimos neque qui cum accusantium ut sit sint inventore.
+
+                        .item
+                            .time 01:30 AM
+                            .info
+                                img(src='images/client-1.jpg' alt='Client 1')
+                                h5 Registration
+                                p Fugit voluptas iusto maiores temporibus autem numquam magnam.
+
+                        .item
+                            .time 02:30 AM
+                            .info
+                                img(src='images/client-4.jpg' alt='Client 4')
+                                h5 Quo qui praesentium nesciunt
+                                    span Willow Trantow
+                                p Voluptatem et alias dolorum est aut sit enim neque veritatis.
+
+                        .item
+                            .time 03:30 AM
+                            .info
+                                img(src='images/client-6.jpg' alt='Client 6')
+                                h5 Qui non qui vel amet culpa sequi.
+                                    span Jack Christiansen
+                                p Nam ex distinctio voluptatem doloremque suscipit iusto.
+
+                        .item
+                            .time 04:30 AM
+                            .info
+                                img(src='images/client-5.jpg' alt='Client 5')
+                                h5 Explicabo et rerum quis et ut ea.
+                                    span Brenden Legros
+                                p Cole Emmerich
+
+                    #stuff-3.stuff
+                        .item
+                            .time 11:30 AM
+                            .info
+                                img(src='images/client-3.jpg' alt='Client 3')
+                                h5 Et voluptatem iusto dicta nobis.
+                                    span Hubert Hirthe
+                                p FMaiores dignissimos neque qui cum accusantium ut sit sint inventore.
+
+                        .item
+                            .time 01:30 AM
+                            .info
+                                img(src='images/client-1.jpg' alt='Client 1')
+                                h5 Registration
+                                p Fugit voluptas iusto maiores temporibus autem numquam magnam.
+
+                        .item
+                            .time 02:30 AM
+                            .info
+                                img(src='images/client-4.jpg' alt='Client 4')
+                                h5 Quo qui praesentium nesciunt
+                                    span Willow Trantow
+                                p Voluptatem et alias dolorum est aut sit enim neque veritatis.
+
+                        .item
+                            .time 04:30 AM
+                            .info
+                                img(src='images/client-5.jpg' alt='Client 5')
+                                h5 Explicabo et rerum quis et ut ea.
+                                    span Brenden Legros
+                                p Cole Emmerich
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        |
+        |
+        include component/scripts
