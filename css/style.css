@@ -35,6 +35,8 @@ Main Rules
 :root {
     --colorOne: #0078fe;
     --colorTwo: #0E1B4D;
+    --colorThree: #f6f7fd;
+    --overlay: rgba(6, 12, 34, 0.8);
 }
 
 body {
@@ -86,6 +88,8 @@ body {
     .main-h {font-size: 30px;margin: 0;}
     .main-h + p {font-size: 16px;}
 }
+
+.vbox-container img {border: 7px solid #cccccc80;}
 
 
 /* Start Nav */
@@ -224,6 +228,7 @@ nav .navbar-nav .nav-item:not(:last-of-type):hover::after {transform: scale(1);}
 header {
     background-image: url(../images/header.jpg);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     height: 100vh;
     position: relative;
@@ -235,7 +240,7 @@ header .overlay {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(6, 12, 34, 0.8);
+    background-color: var(--overlay);
     z-index: 1;
 }
 
@@ -319,6 +324,12 @@ header article .about:hover {
     background-color: var(--colorOne);
 }
 
+.vbox-close {
+    top: 15px;
+    right: 25px;
+    font-size: 45px;
+}
+
 @keyframes scale {
     0% {transform: scale(.73);}
     100% {transform: scale(1);}
@@ -394,6 +405,7 @@ header article .about:hover {
     background-size: cover;
     background-attachment: fixed;
     background-image: url(../images/about.jpg);
+    background-position: center;
     position: relative;
 }
 .about-garage .overlay {
@@ -403,7 +415,7 @@ header article .about:hover {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: rgba(6, 12, 34, 0.8);
+    background-color: var(--overlay);
 }
 .about-garage .container {padding-top: 50px;padding-bottom: 50px;position: relative;z-index: 2;}
 .about-garage h3 {
@@ -425,7 +437,7 @@ header article .about:hover {
 
 /* Start Testimonials */
 
-.testimonials {padding-top: 65px;padding-bottom: 65px;background-color: #f6f7fd;}
+.testimonials {padding-top: 65px;padding-bottom: 65px;background-color: var(--colorThree);}
 
 .testimonials .buttons {
     width: 55%;
@@ -481,20 +493,335 @@ header article .about:hover {
 .testimonials .stuffs .item .info h5 span {font-style: italic;font-weight: 200;padding-left: 7px;}
 .testimonials .stuffs .item .info p {margin: 0;}
 
+@media (max-width: 991px) {
+    .testimonials .stuffs .item .time {display: none;}
+    .testimonials .stuffs .item .info {width: 100%;}
+}
+
+@media (max-width: 767px) {
+    .testimonials .buttons,
+    .testimonials .italic {width: 100%;}
+    .testimonials .stuffs .item .info {text-align: center;}
+    .testimonials .stuffs .item .info img {float: none;margin: 15px 0;}
+    .testimonials .stuffs .item .info h5 span {display: block;padding: 0;}
+}
+
+@media (max-width: 440px) {
+    .testimonials .buttons button {width: 32%;font-size: 16px;}
+}
+
+@media (max-width: 330px) {
+    .testimonials .buttons button {font-size: 13px;padding: 6px ​2px;}
+    .testimonials .italic {margin: 30px auto 10px;font-size: 17px}
+}
+
+
+/* End Testimonials */
+
+
+/* Start Our Products */
+
+.our-products {padding-top: 65px;padding-bottom: 65px;}
+
+.our-products iframe {width: 100%;}
+
+.our-products .row > div[class*='col'] {padding: 0 !important;}
+
+.our-products article {
+    position: relative;
+    z-index: 0;
+    background-image: url(../images/product-1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.our-products article .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    z-index: 1;
+}
+
+.our-products article div {position: relative;z-index: 2;}
+
+.our-products article h3 {
+    color: #FFF;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+.our-products article p {color: #FFF;line-height: 1.9;}
+
+
+.our-products .my-row {justify-content: space-between;margin-top: 5px;}
+.our-products .my-row .image {
+    width: calc((100% - 15px) / 4);
+    padding: 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.our-products .my-row .image img {width: 100%;height: 100%;cursor: pointer;transition: .5s ease-in-out;}
+
+.our-products .my-row .image:hover img {transform: scale(1.2);}
+
+@media (max-width: 800px) {
+
+    .our-products .row > div[class*='col']:first-of-type {order: 2;margin-top: 5px;}
+
+    .our-products .my-row {margin-top: 0;}
+
+    .our-products .my-row .image {width: calc((100% - 10px) / 3);}
+    .our-products .my-row .image:nth-of-type(7),
+    .our-products .my-row .image:nth-of-type(8) {width: calc((100% - 5px) / 2);}
+
+
+}
+
+@media (max-width: 500px) {
+    .our-products article {padding: 40px;}
+    .our-products .my-row .image {width: calc((100% - 5px) / 2);}
+}
+
+@media (max-width: 350px) {
+    .our-products article {padding: 50px 13px 13px;}
+}
+
+/* End Our Products */
+
+
+/* Start Blogs */
+
+.blogs {padding-top: 65px;padding-bottom: 65px;background-color: var(--colorThree);}
+
+.blogs article {--ml: 22px;background-color: #FFF;padding-bottom: 1px;margin-bottom: 25px;}
+.blogs article img {height: 250px;width: 100%;}
+.blogs article h4 {
+    margin-left: var(--ml);
+    color: var(--colorTwo);
+    font-weight: 600;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+.blogs article .stars {margin-left: var(--ml);color: var(--bs-warning);margin-bottom: 5px;}
+.blogs article p {margin-left: var(--ml);font-style: italic;}
+
+/* End Blogs */
+
+/* Start Gallary */
+
+
+.gallary {padding-top: 65px;padding-bottom: 65px;}
+
+.gallary .owl-carousel .owl-stage {padding-top: 10px;}
+.gallary .owl-carousel .owl-item img {height: 220px;}
+.gallary .owl-carousel .owl-item.center {
+    border: 5px solid var(--colorOne);
+    padding: 3px;
+    margin-top: -8px;
+}
+.gallary .owl-carousel .owl-dots {text-align: center;}
+.gallary .owl-carousel button.owl-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    margin: 25px 3px;
+    outline: none;
+}
+.gallary .owl-carousel button.owl-dot.active {background-color: var(--colorOne);}
+
+/* End Gallary */
+
+
+/* Start Sponsors */
+
+.sponsors {background-color: var(--colorThree);padding-top: 65px;padding-bottom: 65px;}
+
+.sponsors .my-row {display: flex;flex-wrap: wrap;}
+.sponsors article {
+    width: 25%;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sponsors article img {width: 180px;filter: grayscale(1);transition: .5s ease-in-out;}
+.sponsors article img:hover {filter: grayscale(0);transform: scale(1.1);}
+
+@media (max-width: 767px) {
+    .sponsors .my-row {justify-content: center;}
+    .sponsors article {width: calc(100% / 3);}
+
+    .sponsors article:nth-of-type(4),
+    .sponsors article:nth-of-type(5) {width: calc(100% / 2);}
+}
+
+@media (max-width: 460px) {
+    .sponsors article {width: 50%;padding: 15px}
+}
+
+
+/* End Sponsors */
+
+/* Start FAQ */
+.faq {padding-top: 65px;padding-bottom: 65px;}
+
+
+/* End FAQ */
+
+
+/* Start NewCar */
+
+.new-car {
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 65px;
+    position: relative;
+}
+.new-car .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    z-index: 1;
+}
+.new-car .container {position: relative;z-index: 2;}
+.new-car h2,
+.new-car p {color: #FFF;}
+.new-car .inputs input {
+    width: calc(100% - 137px);
+    height: 38px;
+    border-radius: 30px;
+    border: 0;
+    padding-left: 16px;
+    font-size: 14px;
+}
+
+@media (max-width: 370px) {
+    .new-car p {font-size: 16px;}
+
+    .new-car .inputs input {width: 100%;}
+    .new-car .inputs button {display: block;margin: 20px auto;}
+}
+
+
+/* End NewCar */
+
+/* Start Buy Car */
+
+.buy-car {padding-top: 65px;padding-bottom: 65px;background-color: var(--colorThree);}
+
+.buy-car article {
+    box-shadow: 0 10px 35px 0 rgb(6 12 34 / 20%);
+    background-color: #FFF;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.buy-car article h5 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.buy-car article .price {
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    color: var(--colorTwo);
+}
+
+.buy-car article ul {
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    padding: 20px 10px;
+    padding-right: 0;
+    margin: 30px 0;
+}
+
+.buy-car article ul li {color: #555;font-weight: 500;margin-bottom: 12px;}
+.buy-car article ul li i {
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.buy-car article ul li.disabled {color: #aaa;}
+.buy-car article button {margin: auto;display: block;}
+.buy-car article button:hover {color: var(--colorOne);}
+
+
+/* End Buy Car */
+
+/* Start Contact Us */
+
+.contact-us {padding-top: 65px;padding-bottom: 65px;}
+
+.contact-us .row > div {padding-top: 25px;padding-bottom: 25px;}
+.contact-us .row > div:not(:last-of-type) {border-right: 1px solid #CCC;}
+.contact-us .row > div h5 {text-transform: uppercase;color: var(--colorTwo);font-weight: 600;}
+.contact-us .row > div p {color: var(--colorOne);font-weight: 500;}
+
+.contact-us form {
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact-us form input {
+    display: block;
+    padding: 8px 15px;
+    border: 1px solid #CCC;
+    color: #333;
+    margin-bottom: 15px;
+    outline: none;
+}
+.contact-us form input[name='name'],
+.contact-us form input[name='email'] {width: 49%;}
+.contact-us form input[name='subject'] {width: 100%;}
+.contact-us form textarea {
+    display: block;
+    width: 100%;
+    height: 150px;
+    padding: 8px 15px;
+    border: 1px solid #CCC;
+    color: #333;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.contact-us form button {margin: 25px auto;}
+.contact-us form button:hover {color: var(--colorOne);}
+
+@media (max-width: 767px) {
+    .contact-us .row > div:not(:last-of-type) {border-right: none;border-bottom: 1px solid #CCC;}
+}
 
 
 
-/* Start Testimonials */
+@media (max-width: 575px) {
+    .contact-us form input[name='name'],
+    .contact-us form input[name='email'] {width: 100%;}
+}
 
-
-
-
-
-
-
-
-
-
+/* End Contact Us */
 
 
 

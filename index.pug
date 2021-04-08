@@ -256,6 +256,214 @@ html(lang="en")
                                     span Brenden Legros
                                 p Cole Emmerich
 
+        // Start Our Products
+        section.our-products
+            h2.main-h our products
+            p Here are some of our products
+            .container-fluid
+                .row
+                    .col-md-6.col-12
+                        iframe(
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6911.474978552353!2d31.184405499999997!3d29.986973399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1617447943717!5m2!1sar!2seg"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                        )
+                
+                    .col-md-6.col-12
+                        article
+                            .overlay
+                            div
+                                h3.h1 downtown, egypt,<br> cairo
+                                p Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.
+
+                .row.my-row
+                    - for (i=2;i < 10;i++)
+                        .image
+                            a.venobox(href=`images/product-${i}.jpg` data-gall="Products Gallery")
+                                img.img-fluid(src=`images/product-${i}.jpg` alt=`Product ${i}`)
+
+        // Start Blogs
+        section.blogs
+            .container
+                h2.main-h blogs
+                p Here are some of our blogs
+
+                .row
+                    .col-md-4.col-sm-6.col-12.offset-0.offset-sm-3.offset-md-0
+                        article
+                            img.img-fluid(src='images/blog-1.jpg' alt='Blog Car')
+                            h4 Blog 1
+                            .stars
+                                - for (i=0; i < 5;i++)
+                                    i.fas.fa-star
+                            p Lorem ipsum dolor sit amet
+
+                    .col-md-4.col-sm-6.col-12
+                        article
+                            img.img-fluid(src='images/blog-2.jpg' alt='Blog Car')
+                            h4 Blog 2
+                            .stars
+                                - for (i=0; i < 5;i++)
+                                    i.fas.fa-star
+                            p Lorem ipsum dolor sit amet
+
+                    .col-md-4.col-sm-6.col-12
+                        article
+                            img.img-fluid(src='images/blog-3.jpg' alt='Blog Car')
+                            h4 Blog 3
+                            .stars
+                                - for (i=0; i < 5;i++)
+                                    i.fas.fa-star
+                            p Lorem ipsum dolor sit amet
+
+        //Start Gallary
+        section.gallary
+            h2.main-h gallary
+            p Check our gallery from the recent products
+
+            .owl-carousel
+                - for (i=1;i < 10;i++)
+                    a.venobox(href=`images/product-${i}.jpg` data-gall="Slider Gallery")
+                        img(src=`images/product-${i}.jpg` alt=`Product ${i}`)
+
+        // Start Sponsors
+        section.sponsors
+            .container
+                h2.main-h sponsors
+                p
+
+                .my-row
+                    - for (i=1; i < 9;i++)
+                        article
+                            img.img-fluid(src=`images/logo-${i}.png` alt=`Logo ${i}`)
+
+        // Start FAQ
+        section.faq.container
+            h2.main-h F.A.Q
+            p
+
+            h6(style='font-size: 100px;color: red') Accordion Soon
+
+        // Start NewCar
+        .new-car
+            .overlay
+            .container 
+                h2.main-h newcar
+                p Rerum numquam illum recusandae quia mollitia consequatur
+
+                .inputs
+                    input(type="email" name='email' placeholder='Type Your Email')
+                    button.main-btn subscribe
+
+        // Start Buy Car
+        section.buy-car
+            .container
+                h2.main-h buy car now
+                p Velit consequatur consequatur inventore iste fugit unde omnis eum aut.
+
+                .row
+                    .col-12.col-md-8.col-lg-4.offset-0.offset-md-2.offset-lg-0
+                        article
+                            h5 standard access
+                            span.price $150
+                            ul.list-unstyled
+                                li
+                                    i.fa.fa-check
+                                    | Regular Seating
+                                li
+                                    i.fa.fa-check
+                                    | Coffee Break
+                                li
+                                    i.fa.fa-check
+                                    | Custom Badge
+                                li.disabled
+                                    i.fa.fa-times
+                                    | Community Access
+                                li.disabled
+                                    i.fa.fa-times
+                                    | Workshop Access
+                                li.disabled
+                                    i.fa.fa-times
+                                    | After Party
+
+                            button.main-btn Buy Now
+
+                    .col-12.col-md-6.col-lg-4
+                        article
+                            h5 pro access
+                            span.price $250
+                            ul.list-unstyled
+                                li
+                                    i.fa.fa-check
+                                    | Regular Seating
+                                li
+                                    i.fa.fa-check
+                                    | Coffee Break
+                                li
+                                    i.fa.fa-check
+                                    | Custom Badge
+                                li
+                                    i.fa.fa-check
+                                    | Community Access
+                                li.disabled
+                                    i.fa.fa-times
+                                    | Workshop Access
+                                li.disabled
+                                    i.fa.fa-times
+                                    | After Party
+
+                            button.main-btn Buy Now
+
+                    .col-12.col-md-6.col-lg-4
+                        article
+                            h5 premium access
+                            span.price $350
+                            ul.list-unstyled
+                                li
+                                    i.fa.fa-check
+                                    | Regular Seating
+                                li
+                                    i.fa.fa-check
+                                    | Coffee Break
+                                li
+                                    i.fa.fa-check
+                                    | Custom Badge
+                                li
+                                    i.fa.fa-check
+                                    | Community Access
+                                li
+                                    i.fa.fa-check
+                                    | Workshop Access
+                                li
+                                    i.fa.fa-check
+                                    | After Party
+
+                            button.main-btn Buy Now
+
+        // Start Contact US
+        .contact-us.container
+            h2.main-h contact us
+            p Nihil officia ut sint molestiae tenetur.
+
+            .row.justify-content-center
+                .text-center.col-11.col-md-4
+                    h5 address
+                    p Egypt, Giza, Al Haram
+
+                .text-center.col-11.col-md-4
+                    h5 phone number
+                    p +20 1100 985 529
+
+                .text-center.col-11.col-md-4
+                    h5 email
+                    p yousefalaa11223344@gmail.com
+
+            form
+                input(type='text' name='name' placeholder='Your Name')
+                input(type='email' name='email' placeholder='Your Email')
+                input(type='text' name='subject' placeholder='Subject')
+                textarea(name="Message" placeholder='Message')
+                button.main-btn send message
+
 
 
 

@@ -20,7 +20,12 @@ $(document).ready(() => {
     $('header article h1').fitText(1.1, { minFontSize: '25px', maxFontSize: '60px' });
 
     // Trigger VenoBox
-    $('.venobox').venobox();
+    $('.venobox').venobox({
+        bgcolor: '',
+        overlayColor: 'rgba(6, 12, 34, 0.85)',
+        closeBackground: '',
+        closeColor: '#fff'
+    });
 
 
     // Smooth Scroll
@@ -51,7 +56,24 @@ $(document).ready(() => {
 
     });
 
+    // Set Height Of Map
+    $('.our-products iframe').height( $('.our-products article').innerHeight() );
 
-
+    // Trigger Owl Carousel
+    $('.gallary .owl-carousel').owlCarousel({
+        autoplay: true,
+        dots: true,
+        loop: true,
+        center:true,
+        margin: 5,
+        responsive: {
+            0: { items: 1 },
+            450: { items: 2 },
+            660: { items: 3 },
+            880: { items: 4 },
+            1200: {items: 5}
+        }
+    });
+    
 
 });
