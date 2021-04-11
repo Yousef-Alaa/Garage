@@ -5,6 +5,19 @@ doctype html
 html(lang="en")
     include component/head
     body
+        // Start Loader
+        section.loader
+            .sk-cube-grid
+                .sk-cube.sk-cube1
+                .sk-cube.sk-cube2
+                .sk-cube.sk-cube3
+                .sk-cube.sk-cube4
+                .sk-cube.sk-cube5
+                .sk-cube.sk-cube6
+                .sk-cube.sk-cube7
+                .sk-cube.sk-cube8
+                .sk-cube.sk-cube9
+
         // Start Navbar
         include component/nav
 
@@ -20,7 +33,7 @@ html(lang="en")
                     button.about about the garage
         
         // Start Our Clients
-        section.our-clients.container
+        section#clients.our-clients.container.nav-add-act
             h2.main-h our clients
             p Here are some of our clients
             .row
@@ -97,7 +110,7 @@ html(lang="en")
                                 i.fab.fa-instagram        
         
         // Start About Garage
-        section.about-garage
+        section#about.about-garage.nav-add-act
             .overlay
             .container
                 .row.justify-content-center
@@ -115,7 +128,7 @@ html(lang="en")
                         p.text-center.text-lg-start Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nihil nostrum ducimus saepe.
         
         // Start Testimonials
-        .testimonials
+        section#testimonials.testimonials.nav-add-act
             .container
                 h2.main-h testimonials
                 p what our clients say
@@ -257,7 +270,7 @@ html(lang="en")
                                 p Cole Emmerich
 
         // Start Our Products
-        section.our-products
+        section#products.our-products.nav-add-act
             h2.main-h our products
             p Here are some of our products
             .container-fluid
@@ -282,7 +295,7 @@ html(lang="en")
                                 img.img-fluid(src=`images/product-${i}.jpg` alt=`Product ${i}`)
 
         // Start Blogs
-        section.blogs
+        section#blogs.blogs.nav-add-act
             .container
                 h2.main-h blogs
                 p Here are some of our blogs
@@ -316,7 +329,7 @@ html(lang="en")
                             p Lorem ipsum dolor sit amet
 
         //Start Gallary
-        section.gallary
+        section#gallary.gallary.nav-add-act
             h2.main-h gallary
             p Check our gallery from the recent products
 
@@ -340,11 +353,41 @@ html(lang="en")
         section.faq.container
             h2.main-h F.A.Q
             p
+            .container 
+                .accordion
+                    .item
+                        h3.h5 Non consectetur a erat nam at lectus urna duis?
+                            span
+                        section Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
 
-            h6(style='font-size: 100px;color: red') Accordion Soon
+                    .item
+                        h3.h5 Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                            span
+                        section Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+
+
+                    .item
+                        h3.h5 Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                            span
+                        section Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+
+                    .item
+                        h3.h5 Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                            span
+                        section Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+
+                    .item
+                        h3.h5 Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                            span
+                        section Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+
+                    .item
+                        h3.h5 Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis?
+                            span
+                        section Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
 
         // Start NewCar
-        .new-car
+        section.new-car
             .overlay
             .container 
                 h2.main-h newcar
@@ -355,7 +398,7 @@ html(lang="en")
                     button.main-btn subscribe
 
         // Start Buy Car
-        section.buy-car
+        section#pricing.buy-car.nav-add-act
             .container
                 h2.main-h buy car now
                 p Velit consequatur consequatur inventore iste fugit unde omnis eum aut.
@@ -440,7 +483,7 @@ html(lang="en")
                             button.main-btn Buy Now
 
         // Start Contact US
-        .contact-us.container
+        section#contact.contact-us.container.nav-add-act
             h2.main-h contact us
             p Nihil officia ut sint molestiae tenetur.
 
@@ -464,11 +507,44 @@ html(lang="en")
                 textarea(name="Message" placeholder='Message')
                 button.main-btn send message
 
+        // Start Footer
+        footer
+            .footer-about
+                .container
+                    .row
+                        .col-lg-3.col-sm-6
+                            .logo 
+                                img.img-fluid(src='images/logo.png' alt='Logo')
+                                .
+                                    TheGarage
 
+                            p In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.
 
+                        - for (i=0; i < 2;i++)
+                            .col-lg-3.col-sm-6
+                                h4 useful links
+                                ul.list-unstyled 
+                                    each val in ['Home', 'About Us', 'Services', 'Terms Of Service', 'Privacy Policy']
+                                        li= val
 
+                        .cont.col-lg-3.col-sm-6
+                            h4 contact us
+                            p A108 Adam Street
+                            p Cairo, Nasr City
+                            p Egypt
+                            p <span> Phone :</span> +20 1150 660 176
+                            p <span> Email :</span> Info@Example.Com
+                            .icons
+                                i.fab.fa-facebook-f
+                                i.fab.fa-twitter
+                                i.fab.fa-instagram
+                                i.fab.fa-google-plus-g
+                                i.fab.fa-linkedin-in
 
-
+            .copy
+                p &copy; copyright <span>theGarage.</span> all rights reserved
+                p designed by <span>mounir mohamed</span>
+                p coding by <span>yousef alaa</span>
 
 
 

@@ -18,6 +18,20 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- Start Loader-->
+    <section class="loader">
+      <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+      </div>
+    </section>
     <!-- Start Navbar-->
     <nav class="navbar navbar-expand-xl">
       <div class="container-xxl"><a class="navbar-brand" href="#"><img class="img-fluid" src="images/logo.png" alt="Logo">TheGarage
@@ -27,8 +41,8 @@
         <div class="collapse navbar-collapse" id="MyNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item active" data-scroll="top"><span>home</span></li>
-            <li class="nav-item" data-scroll="#about"><span>about</span></li>
             <li class="nav-item" data-scroll="#clients"><span>clients</span></li>
+            <li class="nav-item" data-scroll="#about"><span>about</span></li>
             <li class="nav-item" data-scroll="#testimonials"><span>testimonials</span></li>
             <li class="nav-item" data-scroll="#products"><span>products</span></li>
             <li class="nav-item" data-scroll="#blogs"><span>blogs</span></li>
@@ -54,7 +68,7 @@
       </div>
     </header>
     <!-- Start Our Clients-->
-    <section class="our-clients container">
+    <section class="our-clients container nav-add-act" id="clients">
       <h2 class="main-h">our clients</h2>
       <p>Here are some of our clients</p>
       <div class="row">
@@ -115,7 +129,7 @@
       </div>
     </section>
     <!-- Start About Garage-->
-    <section class="about-garage">
+    <section class="about-garage nav-add-act" id="about">
       <div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
@@ -135,7 +149,7 @@
       </div>
     </section>
     <!-- Start Testimonials-->
-    <div class="testimonials">
+    <section class="testimonials nav-add-act" id="testimonials">
       <div class="container">
         <h2 class="main-h">testimonials</h2>
         <p>what our clients say</p>
@@ -266,9 +280,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Start Our Products-->
-    <section class="our-products">
+    <section class="our-products nav-add-act" id="products">
       <h2 class="main-h">our products</h2>
       <p>Here are some of our products</p>
       <div class="container-fluid">
@@ -299,7 +313,7 @@
       </div>
     </section>
     <!-- Start Blogs-->
-    <section class="blogs">
+    <section class="blogs nav-add-act" id="blogs">
       <div class="container">
         <h2 class="main-h">blogs</h2>
         <p>Here are some of our blogs</p>
@@ -332,7 +346,7 @@
       </div>
     </section>
     <!--Start Gallary-->
-    <section class="gallary">
+    <section class="gallary nav-add-act" id="gallary">
       <h2 class="main-h">gallary</h2>
       <p>Check our gallery from the recent products</p>
       <div class="owl-carousel"><a class="venobox" href="images/product-1.jpg" data-gall="Slider Gallery"><img src="images/product-1.jpg" alt="Product 1"></a><a class="venobox" href="images/product-2.jpg" data-gall="Slider Gallery"><img src="images/product-2.jpg" alt="Product 2"></a><a class="venobox" href="images/product-3.jpg" data-gall="Slider Gallery"><img src="images/product-3.jpg" alt="Product 3"></a><a class="venobox" href="images/product-4.jpg" data-gall="Slider Gallery"><img src="images/product-4.jpg" alt="Product 4"></a><a class="venobox" href="images/product-5.jpg" data-gall="Slider Gallery"><img src="images/product-5.jpg" alt="Product 5"></a><a class="venobox" href="images/product-6.jpg" data-gall="Slider Gallery"><img src="images/product-6.jpg" alt="Product 6"></a><a class="venobox" href="images/product-7.jpg" data-gall="Slider Gallery"><img src="images/product-7.jpg" alt="Product 7"></a><a class="venobox" href="images/product-8.jpg" data-gall="Slider Gallery"><img src="images/product-8.jpg" alt="Product 8"></a><a class="venobox" href="images/product-9.jpg" data-gall="Slider Gallery"><img src="images/product-9.jpg" alt="Product 9"></a>
@@ -359,10 +373,37 @@
     <section class="faq container">
       <h2 class="main-h">F.A.Q</h2>
       <p></p>
-      <h6 style="font-size: 100px;color: red">Accordion Soon</h6>
+      <div class="container"> 
+        <div class="accordion">
+          <div class="item">
+            <h3 class="h5">Non consectetur a erat nam at lectus urna duis?<span></span></h3>
+            <section>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</section>
+          </div>
+          <div class="item">
+            <h3 class="h5">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?<span></span></h3>
+            <section>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</section>
+          </div>
+          <div class="item">
+            <h3 class="h5">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?<span></span></h3>
+            <section>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</section>
+          </div>
+          <div class="item">
+            <h3 class="h5">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?<span></span></h3>
+            <section>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</section>
+          </div>
+          <div class="item">
+            <h3 class="h5">Tempus quam pellentesque nec nam aliquam sem et tortor consequat?<span></span></h3>
+            <section>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</section>
+          </div>
+          <div class="item">
+            <h3 class="h5">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis?<span></span></h3>
+            <section>Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.</section>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Start NewCar-->
-    <div class="new-car">
+    <section class="new-car">
       <div class="overlay"></div>
       <div class="container"> 
         <h2 class="main-h">newcar</h2>
@@ -372,9 +413,9 @@
           <button class="main-btn">subscribe</button>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Start Buy Car-->
-    <section class="buy-car">
+    <section class="buy-car nav-add-act" id="pricing">
       <div class="container">
         <h2 class="main-h">buy car now</h2>
         <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
@@ -425,7 +466,7 @@
       </div>
     </section>
     <!-- Start Contact US-->
-    <div class="contact-us container">
+    <section class="contact-us container nav-add-act" id="contact">
       <h2 class="main-h">contact us</h2>
       <p>Nihil officia ut sint molestiae tenetur.</p>
       <div class="row justify-content-center">
@@ -449,7 +490,56 @@
         <textarea name="Message" placeholder="Message"></textarea>
         <button class="main-btn">send message</button>
       </form>
-    </div>
+    </section>
+    <!-- Start Footer-->
+    <footer>
+      <div class="footer-about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+              <div class="logo"> <img class="img-fluid" src="images/logo.png" alt="Logo">TheGarage
+                
+              </div>
+              <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h4>useful links</h4>
+              <ul class="list-unstyled"> 
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Terms Of Service</li>
+                <li>Privacy Policy</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h4>useful links</h4>
+              <ul class="list-unstyled"> 
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Terms Of Service</li>
+                <li>Privacy Policy</li>
+              </ul>
+            </div>
+            <div class="cont col-lg-3 col-sm-6">
+              <h4>contact us</h4>
+              <p>A108 Adam Street</p>
+              <p>Cairo, Nasr City</p>
+              <p>Egypt</p>
+              <p><span> Phone :</span> +20 1150 660 176</p>
+              <p><span> Email :</span> Info@Example.Com</p>
+              <div class="icons"><i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-google-plus-g"></i><i class="fab fa-linkedin-in"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <p>&copy; copyright <span>theGarage.</span> all rights reserved</p>
+        <p>designed by <span>mounir mohamed</span></p>
+        <p>coding by <span>yousef alaa</span></p>
+      </div>
+    </footer>
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>

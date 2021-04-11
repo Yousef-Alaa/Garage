@@ -3,15 +3,42 @@ $(document).ready(() => {
     let
         win = $(window),
 
+        navItem = $('nav .navbar-nav .nav-item'),
+
         nav = $('nav');
 
+    win.on('load', function () {
+        let load = $('.loader');
+        load.delay(1000).fadeOut(500, () => {load.remove()})
+    });
 
     win.scroll(function() {
+        
+        // Add/Remove Active From Navbar
         if (win.scrollTop() >= 100) {
             nav.addClass('active');
         } else {
             nav.removeClass('active');
         }
+
+        // Nav Links add/remove active for items
+        $('.nav-add-act').each(function () {
+            
+            let th = $(this),// Cashing This
+                
+                target = '#' + th.attr('id');
+            
+            
+            if (win.scrollTop() <= win.height()) {// Add Active To Home
+                
+                navItem.eq(0).addClass('active').siblings().removeClass('active');
+                
+            } else if (win.scrollTop() >= th.offset().top) {// Add Active To Anothers Links
+                
+                $(`nav .nav-item[data-scroll='${target}']`).addClass('active').siblings().removeClass('active');
+                
+            }
+        });
     });
 
     nav.headroom();
@@ -74,6 +101,21 @@ $(document).ready(() => {
             1200: {items: 5}
         }
     });
+
+        // Accordion
+
+        let accrH3 = $('.accordion .item h3');
+        
+        accrH3.click(function () {
+            let h3 = $(this);
+            
+            h3.parent().toggleClass('active').siblings().removeClass("active");
+            
+            h3.parent().siblings().find('section').slideUp(500);
+            
+            h3.next().slideToggle(500);
+            
+        });
     
 
 });
