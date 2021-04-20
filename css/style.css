@@ -689,7 +689,7 @@ header article .about:hover {
     margin-top: 25px;
     text-transform: uppercase;
 }
-.blogs article .stars {margin-left: var(--ml);color: var(--bs-warning);margin-bottom: 5px;}
+.blogs article .stars {margin-left: var(--ml);color: var(--warning);margin-bottom: 5px;}
 .blogs article p {margin-left: var(--ml);font-style: italic;}
 
 /* End Blogs */
@@ -767,7 +767,7 @@ header article .about:hover {
     border-radius: 7px 7px 0 0;
 }
 
-.faq .accordion .item.active h3 {color: var(--bs-red);}
+.faq .accordion .item.active h3 {color: var(--red);}
 
 .faq .accordion .item h3 span {
     float: right;
@@ -795,7 +795,7 @@ header article .about:hover {
 
 .faq .accordion .item h3 span:after {transform: rotate(90deg);}
 
-.faq .accordion .item.active h3 span {background-color: var(--bs-red);}
+.faq .accordion .item.active h3 span {background-color: var(--red);}
 .faq .accordion .item.active h3 span::after {opacity: 0}
 
 .faq .accordion .item section {
