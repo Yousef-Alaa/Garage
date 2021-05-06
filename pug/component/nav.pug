@@ -6,19 +6,11 @@ nav.navbar.navbar-expand-xl
                 TheGarage
         
         
-        button.navbar-toggler.un-active(
-            type="button",
-            aria-expanded="false",
-            aria-controls="MyNav",
-            data-bs-target="#MyNav",
-            data-bs-toggle="collapse",
-            aria-label="Toggle navigation"
-            )
-
+        button.navbar-toggler(aria-label="Right Align")
             span.nav-icon
         
-        #MyNav.collapse.navbar-collapse
-            ul.navbar-nav.ms-auto
+        .navbar-collapse
+            ul.navbar-nav
                 li.nav-item.active(data-scroll="top"): span home
                 each val in ['clients', 'about', 'testimonials', 'products', 'blogs', 'gallary', 'pricing', 'contact']
                 

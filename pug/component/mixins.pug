@@ -1,0 +1,21 @@
+mixin client(num, delay)
+    .col-md-4.col-6
+        article(data-aos="fade-up" data-aos-delay=delay)
+            img.img-fluid(src=`images/client-${num}.jpg` alt='Client 0#{num}')
+            .box
+                h3 devid fancosh
+                p client in garage
+                .icons
+                    i.fab.fa-facebook
+                    i.fab.fa-twitter
+                    i.fab.fa-google-plus
+                    i.fab.fa-instagram
+
+mixin blog(effect, num)
+    article(data-aos=effect)
+        img.img-fluid(src=`images/blog-${num}.jpg` alt='Blog Car')
+        h4 Blog #{num}
+        .stars
+            - for (i=0; i < 5;i++)
+                i.fas.fa-star
+        p Lorem ipsum dolor sit amet

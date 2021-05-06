@@ -1,6 +1,8 @@
 - var tit = 'Garage'
 - var desc = 'This Website For Garage'
 
+include component/mixins
+
 doctype html
 html(lang="en")
     include component/head
@@ -25,7 +27,7 @@ html(lang="en")
         header
             .overlay
             .container
-                article
+                article(data-aos="zoom-in")
                     h1 get your<br>dream <span>car</span> now
                     p enjoy in <span>our</span> garage, sorry your garage
                     a.play-vid.venobox(href='https://www.youtube.com/watch?v=Q8-AE6RjbcM' data-vbtype="video" data-autoplay="true")
@@ -37,77 +39,12 @@ html(lang="en")
             h2.main-h our clients
             p Here are some of our clients
             .row
-                .col-md-4.col-6
-                    article
-                        img.img-fluid(src='images/client-1.jpg' alt='Client 01')
-                        .box
-                            h3 devid fancosh
-                            p client in garage
-                            .icons
-                                i.fab.fa-facebook
-                                i.fab.fa-twitter
-                                i.fab.fa-google-plus
-                                i.fab.fa-instagram
-                                
-                .col-md-4.col-6
-                    article
-                        img.img-fluid(src='images/client-2.jpg' alt='Client 02')
-                        .box
-                            h3 devid fancosh
-                            p client in garage
-                            .icons
-                                i.fab.fa-facebook
-                                i.fab.fa-twitter
-                                i.fab.fa-google-plus
-                                i.fab.fa-instagram
-        
-                .col-md-4.col-6
-                    article
-                        img.img-fluid(src='images/client-3.jpg' alt='Client 03')
-                        .box
-                            h3 devid fancosh
-                            p client in garage
-                            .icons
-                                i.fab.fa-facebook
-                                i.fab.fa-twitter
-                                i.fab.fa-google-plus
-                                i.fab.fa-instagram
-                
-                .col-md-4.col-6
-                    article
-                        img.img-fluid(src='images/client-4.jpg' alt='Client 04')
-                        .box
-                            h3 devid fancosh
-                            p client in garage
-                            .icons
-                                i.fab.fa-facebook
-                                i.fab.fa-twitter
-                                i.fab.fa-google-plus
-                                i.fab.fa-instagram
-        
-                .col-md-4.col-6
-                    article
-                        img.img-fluid(src='images/client-5.jpg' alt='Client 05')
-                        .box
-                            h3 devid fancosh
-                            p client in garage
-                            .icons
-                                i.fab.fa-facebook
-                                i.fab.fa-twitter
-                                i.fab.fa-google-plus
-                                i.fab.fa-instagram
-                
-                .col-md-4.col-6
-                    article
-                        img.img-fluid(src='images/client-6.jpg' alt='Client 06')
-                        .box
-                            h3 devid fancosh
-                            p client in garage
-                            .icons
-                                i.fab.fa-facebook
-                                i.fab.fa-twitter
-                                i.fab.fa-google-plus
-                                i.fab.fa-instagram        
+                +client(1, 0)
+                +client(2, 150)
+                +client(3, 300)
+                +client(4, 0)
+                +client(5, 150)
+                +client(6, 300)
         
         // Start About Garage
         section#about.about-garage.nav-add-act
@@ -278,7 +215,7 @@ html(lang="en")
                     .col-md-6.col-12
                         iframe(
                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6911.474978552353!2d31.184405499999997!3d29.986973399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1617447943717!5m2!1sar!2seg"
-                            style="border:0;" allowfullscreen="" loading="lazy"
+                            style="border:0;" allowfullscreen="" loading="lazy" title='Google Map'
                         )
                 
                     .col-md-6.col-12
@@ -302,31 +239,13 @@ html(lang="en")
 
                 .row
                     .col-md-4.col-sm-6.col-12.offset-0.offset-sm-3.offset-md-0
-                        article
-                            img.img-fluid(src='images/blog-1.jpg' alt='Blog Car')
-                            h4 Blog 1
-                            .stars
-                                - for (i=0; i < 5;i++)
-                                    i.fas.fa-star
-                            p Lorem ipsum dolor sit amet
+                        +blog("fade-right", 1)
 
                     .col-md-4.col-sm-6.col-12
-                        article
-                            img.img-fluid(src='images/blog-2.jpg' alt='Blog Car')
-                            h4 Blog 2
-                            .stars
-                                - for (i=0; i < 5;i++)
-                                    i.fas.fa-star
-                            p Lorem ipsum dolor sit amet
+                        +blog("fade-up", 2)
 
                     .col-md-4.col-sm-6.col-12
-                        article
-                            img.img-fluid(src='images/blog-3.jpg' alt='Blog Car')
-                            h4 Blog 3
-                            .stars
-                                - for (i=0; i < 5;i++)
-                                    i.fas.fa-star
-                            p Lorem ipsum dolor sit amet
+                        +blog("fade-left", 3)
 
         //Start Gallary
         section#gallary.gallary.nav-add-act
@@ -347,7 +266,7 @@ html(lang="en")
                 .my-row
                     - for (i=1; i < 9;i++)
                         article
-                            img.img-fluid(src=`images/logo-${i}.png` alt=`Logo ${i}`)
+                            img.img-fluid(src=`images/logo-${i}.png` alt=`Logo ${i}` data-aos="fade-in")
 
         // Start FAQ
         section.faq.container
@@ -393,7 +312,7 @@ html(lang="en")
                 h2.main-h newcar
                 p Rerum numquam illum recusandae quia mollitia consequatur
 
-                .inputs
+                .inputs(data-aos="fade-up")
                     input(type="email" name='email' placeholder='Type Your Email')
                     button.main-btn subscribe
 
@@ -405,7 +324,7 @@ html(lang="en")
 
                 .row
                     .col-12.col-md-8.col-lg-4.offset-0.offset-md-2.offset-lg-0
-                        article
+                        article(data-aos="fade-up")
                             h5 standard access
                             span.price $150
                             ul.list-unstyled
@@ -431,7 +350,7 @@ html(lang="en")
                             button.main-btn Buy Now
 
                     .col-12.col-md-6.col-lg-4
-                        article
+                        article(data-aos="fade-up" data-aos-delay='150')
                             h5 pro access
                             span.price $250
                             ul.list-unstyled
@@ -457,7 +376,7 @@ html(lang="en")
                             button.main-btn Buy Now
 
                     .col-12.col-md-6.col-lg-4
-                        article
+                        article(data-aos="fade-up" data-aos-delay='300')
                             h5 premium access
                             span.price $350
                             ul.list-unstyled
@@ -488,19 +407,19 @@ html(lang="en")
             p Nihil officia ut sint molestiae tenetur.
 
             .row.justify-content-center
-                .text-center.col-11.col-md-4
+                .text-center.col-11.col-md-4(data-aos="fade-up")
                     h5 address
                     p Egypt, Giza, Al Haram
 
-                .text-center.col-11.col-md-4
+                .text-center.col-11.col-md-4(data-aos="fade-up")
                     h5 phone number
                     p +20 1100 985 529
 
-                .text-center.col-11.col-md-4
+                .text-center.col-11.col-md-4(data-aos="fade-up")
                     h5 email
                     p yousefalaa11223344@gmail.com
 
-            form
+            form(data-aos="fade-up")
                 input(type='text' name='name' placeholder='Your Name')
                 input(type='email' name='email' placeholder='Your Email')
                 input(type='text' name='subject' placeholder='Subject')
@@ -508,52 +427,10 @@ html(lang="en")
                 button.main-btn send message
 
         // Start Footer
-        footer
-            .footer-about
-                .container
-                    .row
-                        .col-lg-3.col-sm-6
-                            .logo 
-                                img.img-fluid(src='images/logo.png' alt='Logo')
-                                .
-                                    TheGarage
+        include component/footer
 
-                            p In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.
+        // Start Scroll To Top
+        button.btn.top-btn(data-scroll='top' aria-label="Right Align")
+            i.fas.fa-arrow-up
 
-                        - for (i=0; i < 2;i++)
-                            .col-lg-3.col-sm-6
-                                h4 useful links
-                                ul.list-unstyled 
-                                    each val in ['Home', 'About Us', 'Services', 'Terms Of Service', 'Privacy Policy']
-                                        li= val
-
-                        .cont.col-lg-3.col-sm-6
-                            h4 contact us
-                            p A108 Adam Street
-                            p Cairo, Nasr City
-                            p Egypt
-                            p <span> Phone :</span> +20 1150 660 176
-                            p <span> Email :</span> Info@Example.Com
-                            .icons
-                                i.fab.fa-facebook-f
-                                i.fab.fa-twitter
-                                i.fab.fa-instagram
-                                i.fab.fa-google-plus-g
-                                i.fab.fa-linkedin-in
-
-            .copy
-                p &copy; copyright <span>theGarage.</span> all rights reserved
-                p designed by <span>mounir mohamed</span>
-                p coding by <span>yousef alaa</span>
-
-
-
-
-
-
-
-
-
-        |
-        |
         include component/scripts

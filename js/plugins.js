@@ -3,13 +3,25 @@ $(document).ready(() => {
     let
         win = $(window),
 
+        topBtn = $('.top-btn'),
+
         navItem = $('nav .navbar-nav .nav-item'),
 
         nav = $('nav');
 
     win.on('load', function () {
         let load = $('.loader');
-        load.delay(1000).fadeOut(500, () => {load.remove()})
+        load.delay(1000).fadeOut(500, () => {
+            load.remove();
+            // Trigger AOS
+            AOS.init({
+                offset: 250, // offset (in px) from the original trigger point
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 800, // values from 0 to 3000, with step 50ms
+                easing: 'ease', // default easing for AOS animations
+                once: false // whether animation should happen only once - while scrolling down
+            });
+        });
     });
 
     win.scroll(function() {
@@ -19,6 +31,13 @@ $(document).ready(() => {
             nav.addClass('active');
         } else {
             nav.removeClass('active');
+        }
+
+        // Scroll Top Btn
+        if (win.scrollTop() >= 1000) {
+            topBtn.css('bottom', '20px');
+        } else {
+            topBtn.css('bottom', '-45px');
         }
 
         // Nav Links add/remove active for items
@@ -41,7 +60,22 @@ $(document).ready(() => {
         });
     });
 
+    // Trigger NiceScroll
+    // $("body").niceScroll({
+    //     cursorcolor: $(':root').css('--colorOne'),
+    //     cursorwidth: "13px",
+    //     cursorborderradius: "6px",
+    //     cursorborder: "none",
+    //     zindex: 9
+    // });
+
+    $('.main-h, .main-h + p').attr('data-aos', "flip-down")
+
     nav.headroom();
+
+    $('.navbar-toggler').click(() => {
+        $('.navbar-nav').slideToggle(500);
+    });
 
     // Trigger FitText
     $('header article h1').fitText(1.1, { minFontSize: '25px', maxFontSize: '60px' });
@@ -101,6 +135,8 @@ $(document).ready(() => {
             1200: {items: 5}
         }
     });
+
+    $('.gallary .owl-carousel button.owl-dot').attr('aria-label', "Center Align")
 
         // Accordion
 

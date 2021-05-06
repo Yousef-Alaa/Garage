@@ -1,0 +1,40 @@
+footer
+    .footer-about
+        .container
+            .row
+                .col-lg-3.col-sm-6
+                    article(data-aos="fade-up")
+                        .logo
+                            img.img-fluid(src='images/logo.png' alt='Logo')
+                            .
+                                TheGarage
+
+                        p In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.
+
+                - for (i=0; i < 2;i++)
+                    .col-lg-3.col-sm-6
+                        article(data-aos="fade-up" data-aos-delay='200')
+                            h4 useful links
+                            ul.list-unstyled 
+                                each val in ['Home', 'About Us', 'Services', 'Terms Of Service', 'Privacy Policy']
+                                    li= val
+
+                .cont.col-lg-3.col-sm-6
+                    article(data-aos="fade-up"  data-aos-delay='400')
+                        h4 contact us
+                        p A108 Adam Street
+                        p Cairo, Nasr City
+                        p Egypt
+                        p <span> Phone :</span> +20 1150 660 176
+                        p <span> Email :</span> Info@Example.Com
+                        .icons
+                            i.fab.fa-facebook-f
+                            i.fab.fa-twitter
+                            i.fab.fa-instagram
+                            i.fab.fa-google-plus-g
+                            i.fab.fa-linkedin-in
+
+    .copy
+        p &copy; copyright <span>theGarage.</span> all rights reserved
+        p designed by <span>mounir mohamed</span>
+        p coding by <span>yousef alaa</span>
