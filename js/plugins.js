@@ -61,13 +61,13 @@ $(document).ready(() => {
     });
 
     // Trigger NiceScroll
-    // $("body").niceScroll({
-    //     cursorcolor: $(':root').css('--colorOne'),
-    //     cursorwidth: "13px",
-    //     cursorborderradius: "6px",
-    //     cursorborder: "none",
-    //     zindex: 9
-    // });
+    $("body").niceScroll({
+        cursorcolor: $(':root').css('--colorOne'),
+        cursorwidth: "13px",
+        cursorborderradius: "6px",
+        cursorborder: "none",
+        zindex: 9
+    });
 
     $('.main-h, .main-h + p').attr('data-aos', "flip-down")
 
