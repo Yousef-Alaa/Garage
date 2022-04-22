@@ -1,3 +1,82 @@
+(function($) {
+
+    if(!$) {
+        return;
+    }
+
+    ////////////
+    // Plugin //
+    ////////////
+
+    $.fn.headroom = function(option) {
+        return this.each(function() {
+        var $this   = $(this),
+            data      = $this.data('headroom'),
+            options   = typeof option === 'object' && option;
+
+        options = $.extend(true, {}, Headroom.options, options);
+
+        if (!data) {
+            data = new Headroom(this, options);
+            data.init();
+            $this.data('headroom', data);
+        }
+        if (typeof option === 'string') {
+            data[option]();
+
+            if(option === 'destroy'){
+            $this.removeData('headroom');
+            }
+        }
+        });
+    };
+
+    //////////////
+    // Data API //
+    //////////////
+
+    $('[data-headroom]').each(function() {
+        var $this = $(this);
+        $this.headroom($this.data());
+    });
+
+}(window.Zepto || window.jQuery));
+
+
+
+(function( $ ){
+  
+    $.fn.fitText = function( kompressor, options ) {
+  
+      // Setup options
+      var compressor = kompressor || 1,
+          settings = $.extend({
+            'minFontSize' : Number.NEGATIVE_INFINITY,
+            'maxFontSize' : Number.POSITIVE_INFINITY
+          }, options);
+  
+      return this.each(function(){
+  
+        // Store the object
+        var $this = $(this);
+  
+        // Resizer() resizes items based on the object width divided by the compressor * 10
+        var resizer = function () {
+          $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        };
+  
+        // Call once to set.
+        resizer();
+  
+        // Call on resize. Opera debounces their resize by default.
+        $(window).on('resize.fittext orientationchange.fittext', resizer);
+  
+      });
+  
+    };
+
+})( jQuery );
+
 $(document).ready(() => {
 
     let

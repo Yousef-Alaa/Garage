@@ -1,15 +1,15 @@
 mixin client(num, delay)
     .col-md-4.col-6
         article(data-aos="fade-up" data-aos-delay=delay)
-            img.img-fluid(src=`images/client-${num}.jpg` alt='Client 0#{num}')
+            img.img-fluid(src=`images/client-${num}.jpg` alt=`Client 0${num}`)
             .box
                 h3 devid fancosh
                 p client in garage
                 .icons
-                    i.fab.fa-facebook
-                    i.fab.fa-twitter
-                    i.fab.fa-google-plus
-                    i.fab.fa-instagram
+                    i.icon-facebook-f-brands
+                    i.icon-twitter-brands
+                    i.icon-google-plus-g-brands
+                    i.icon-instagram-brands
 
 mixin blog(effect, num)
     article(data-aos=effect)
@@ -17,5 +17,5 @@ mixin blog(effect, num)
         h4 Blog #{num}
         .stars
             - for (i=0; i < 5;i++)
-                i.fas.fa-star
+                i.icon-star
         p Lorem ipsum dolor sit amet
